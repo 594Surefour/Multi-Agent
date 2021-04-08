@@ -1,0 +1,13 @@
+cvxopt
+image
+ipython
+ipythonblocks
+ipywidgets
+jupyter
+matplotlib
+networkx
+numpy
+pandas
+pillow
+scipy
+sortedcontainers
