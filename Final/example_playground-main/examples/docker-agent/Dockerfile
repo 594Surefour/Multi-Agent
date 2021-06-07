@@ -4,7 +4,8 @@ ADD ./examples/docker-agent /agent
 
 # @TODO to be replaced with `pip install pommerman`
 ADD . /pommerman
-RUN cd /pommerman && pip install . -i https://mirrors.aliyun.com/pypi/simple
+COPY ./pommerman/torch-1.8.1-cp36-cp36m-manylinux1_x86_64.whl /pommerman
+RUN cd /pommerman && pip install torch-1.8.1-cp36-cp36m-manylinux1_x86_64.whl && pip install . -i https://mirrors.aliyun.com/pypi/simple --default-timeout=6000
 # end @TODO
 
 EXPOSE 10080
